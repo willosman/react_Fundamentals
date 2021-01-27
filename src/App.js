@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Challenge from './components/challenges/dayOne/Challenge'
+import Footer from './components/Footer'
+import Home from './components/Header'
 
-function App() {
+function App() { //this is a root component
+                //parent function
+const name = "Will" //JS above return statement can be injected into JSX using { }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className ="App">
+      <h1>Welcome to React, {name}</h1>
+      <h2>We just modified our root App component</h2>
+      <Header /> {/*This is how you mount a component */}
+      <Challenge /> {/*child function*/}
+      <Home />
+      <Footer />
     </div>
   );
 }
